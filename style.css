@@ -115,12 +115,6 @@ h2{
 .muted{ margin: 0 0 10px; color: var(--muted); }
 .small{ font-size: .92rem; }
 
-.countdown .grid4{
-  display:grid;
-  grid-template-columns: repeat(4, minmax(0, 1fr));
-  gap: 10px;
-  margin-top: 10px;
-}
 .box{
   border: 1px solid rgba(255,255,255,.12);
   background: rgba(255,255,255,.06);
@@ -191,11 +185,8 @@ h2{
   padding: 18px 10px;
 }
 
-@media (max-width: 980px){
-  .hero{ grid-template-columns: 1fr; }
-  .gallery{ grid-template-columns: repeat(4, minmax(0,1fr)); }
-}
 @media (max-width: 520px){
-  .countdown .grid4{ grid-template-columns: repeat(2, minmax(0,1fr)); }
   .gallery{ grid-template-columns: repeat(3, minmax(0,1fr)); }
 }
+
+
