@@ -3,80 +3,130 @@
 <head>
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width,initial-scale=1" />
-  <title>Happy Birthday 🎉</title>
-  <link rel="stylesheet" href="style.css" />
+  <meta name="theme-color" content="#0b1020" />
+  <title>Happy Birthday, Dinda Alyssa Lusida Putri 🎂</title>
+
+  <link rel="stylesheet" href="./style.css" />
 </head>
 
 <body>
-  <canvas id="confettiCanvas" aria-hidden="true"></canvas>
+  <main class="wrap">
+    <header class="hero">
+      <div class="hero__left">
+        <div class="pill">✨ Special Day ✨</div>
+        <h1>
+          Selamat Ulang Tahun,<br />
+          <span class="accent">Dinda Alyssa Lusida Putri</span> 🎂
+        </h1>
 
-  <header class="hero">
-    <div class="hero__content">
-      <p class="badge">✨ Special Day ✨</p>
-      <h1>Selamat Ulang Tahun, <span id="personName">Teman Hebat</span>! 🎂</h1>
-      <p class="subtitle" id="subtitleText">
-        Semoga hari ini jadi hari yang lembut, hangat, dan penuh hal baik.
-      </p>
+        <p class="sub">
+          Lahir: <strong>20 Februari 2005</strong> • Umur sekarang: <strong><span id="ageNow">-</span></strong>
+        </p>
 
-      <div class="ctaRow">
-        <button class="btn" id="playBtn" type="button" aria-label="Putar musik">
-          ▶️ Putar Musik
-        </button>
-        <button class="btn btn--ghost" id="surpriseBtn" type="button">
-          🎁 Tombol Kejutan
-        </button>
+        <p class="desc">
+          Semoga hari ini jadi hari yang hangat, penuh hal baik, dan semua yang kamu doakan pelan-pelan terwujud. 🤍
+        </p>
+
+        <div class="btnRow">
+          <button class="btn" id="musicBtn" type="button">▶️ Putar Musik</button>
+          <a class="btn btn--ghost" href="#gallery">📸 Lihat Galeri</a>
+        </div>
+
+        <section class="card countdown" aria-label="Hitung mundur ulang tahun">
+          <h2>Countdown ke ulang tahun 🎈</h2>
+          <p class="muted" id="targetText">Menuju: -</p>
+
+          <div class="grid4">
+            <div class="box"><div class="num" id="dd">00</div><div class="lbl">Hari</div></div>
+            <div class="box"><div class="num" id="hh">00</div><div class="lbl">Jam</div></div>
+            <div class="box"><div class="num" id="mm">00</div><div class="lbl">Menit</div></div>
+            <div class="box"><div class="num" id="ss">00</div><div class="lbl">Detik</div></div>
+          </div>
+
+          <noscript>
+            <p class="warn">Browser kamu mematikan JavaScript, jadi countdown tidak bisa jalan.</p>
+          </noscript>
+        </section>
+
+        <section class="card">
+          <h2>Pesan Rahasia 🔒</h2>
+          <p class="muted">Klik untuk membuka (ini <b>tanpa JS pun bisa</b>).</p>
+
+          <details class="details">
+            <summary>✨ Buka Pesan</summary>
+            <div class="details__content">
+              <p>
+                Dinda, kamu itu spesial. Terima kasih sudah jadi orang yang baik, kuat, dan menginspirasi.
+                Semoga kamu selalu dikelilingi orang yang tulus, rezeki yang lancar, dan hati yang tenang. 🤍
+              </p>
+              <p class="muted">
+                — Dari seseorang yang mengagumimu.
+              </p>
+            </div>
+          </details>
+        </section>
       </div>
 
-      <section class="countdown" aria-label="Hitung mundur">
-        <h2>Countdown ke ulang tahun 🎈</h2>
-        <div class="countdown__grid" id="countdownGrid">
-          <div class="timeBox"><div class="num" id="dd">00</div><div class="lbl">Hari</div></div>
-          <div class="timeBox"><div class="num" id="hh">00</div><div class="lbl">Jam</div></div>
-          <div class="timeBox"><div class="num" id="mm">00</div><div class="lbl">Menit</div></div>
-          <div class="timeBox"><div class="num" id="ss">00</div><div class="lbl">Detik</div></div>
-        </div>
-        <p class="hint" id="targetHint"></p>
-      </section>
-    </div>
+      <aside class="hero__right">
+        <section class="card" id="gallery">
+          <h2>Galeri Foto 📸</h2>
+          <p class="muted">Klik foto untuk buka versi besar (langsung buka file, tidak pakai popup).</p>
 
-    <div class="hero__card">
-      <div class="card">
-        <h3>Pesan Rahasia 🔒</h3>
-        <p class="muted">Klik tombol di bawah untuk membuka pesan rahasia.</p>
-        <button class="btn btn--small" id="revealBtn" type="button">Buka Pesan</button>
+          <div class="gallery">
+            <!-- Ganti file di assets/ dengan nama yang sama -->
+            <a href="./assets/foto1.jpg" target="_blank" rel="noopener">
+              <img src="./assets/foto1.jpg" alt="Foto 1" onerror="this.closest('a').style.display='none'" />
+            </a>
+            <a href="./assets/foto2.jpg" target="_blank" rel="noopener">
+              <img src="./assets/foto2.jpg" alt="Foto 2" onerror="this.closest('a').style.display='none'" />
+            </a>
+            <a href="./assets/foto3.jpg" target="_blank" rel="noopener">
+              <img src="./assets/foto3.jpg" alt="Foto 3" onerror="this.closest('a').style.display='none'" />
+            </a>
+            <a href="./assets/foto4.jpg" target="_blank" rel="noopener">
+              <img src="./assets/foto4.jpg" alt="Foto 4" onerror="this.closest('a').style.display='none'" />
+            </a>
+            <a href="./assets/foto5.jpg" target="_blank" rel="noopener">
+              <img src="./assets/foto5.jpg" alt="Foto 5" onerror="this.closest('a').style.display='none'" />
+            </a>
+            <a href="./assets/foto6.jpg" target="_blank" rel="noopener">
+              <img src="./assets/foto6.jpg" alt="Foto 6" onerror="this.closest('a').style.display='none'" />
+            </a>
+          </div>
 
-        <div class="secret" id="secretBox" hidden>
-          <p id="secretText">
-            Kamu itu inspirasi. Terima kasih sudah ada — semoga semua hal baik pelan-pelan menghampirimu.
+          <p class="muted small">
+            Kalau foto belum muncul, berarti file di folder <code>assets</code> belum ada / namanya beda.
           </p>
-        </div>
-      </div>
+        </section>
 
-      <div class="card">
-        <h3>Galeri Foto 📸</h3>
-        <p class="muted">Klik foto untuk memperbesar.</p>
-        <div class="gallery" id="gallery"></div>
-      </div>
-    </div>
-  </header>
+        <section class="card">
+          <h2>Kejutan 🎁</h2>
+          <p class="muted">Klik untuk membuka (tanpa popup).</p>
 
-  <!-- Lightbox -->
-  <div class="lightbox" id="lightbox" hidden role="dialog" aria-label="Preview foto">
-    <button class="lightbox__close" id="closeLightbox" aria-label="Tutup">✕</button>
-    <img id="lightboxImg" alt="Preview foto" />
-  </div>
+          <details class="details">
+            <summary>🎉 Buka Kejutan</summary>
+            <div class="details__content">
+              <p>
+                Hari ini milikmu! Semoga langkahmu makin ringan, hatimu makin tenang,
+                dan senyummu makin sering muncul 😄
+              </p>
+              <button class="btn btn--small" id="confettiBtn" type="button">✨ Confetti</button>
+            </div>
+          </details>
+        </section>
+      </aside>
+    </header>
 
+    <!-- Audio: taruh file ./assets/song.mp3 -->
+    <audio id="bgMusic" preload="auto">
+      <source src="./assets/song.mp3" type="audio/mpeg" />
+    </audio>
 
-  <!-- Audio (autoplay biasanya diblokir browser, jadi pakai tombol) -->
-  <audio id="bgMusic" preload="auto">
-    <!-- Ganti ke file kamu -->
-    <source src="assets/song.mp3" type="audio/mpeg" />
-  </audio>
+    <footer class="footer">
+      <p>Made with ❤️ for Dinda Alyssa Lusida Putri</p>
+    </footer>
+  </main>
 
-  <footer class="footer">
-    <p>Made with ❤️</p>
-  </footer>
-
-  <script src="script.js"></script>
+  <script src="./script.js"></script>
 </body>
 </html>
